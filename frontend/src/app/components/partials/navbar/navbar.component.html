@@ -1,8 +1,8 @@
 <nav class="flex bg-teal-500 shadow-md">
-    <div class="w-full max-w-7xl mx-auto flex justify-between px-4 py-2">
+    <div class="w-full max-w-[1440px] mx-auto flex justify-between px-4 py-2">
         <div class="flex items-center">
             <a href="/"><img class="size-12 rounded-full" src="/assets/imgs/logo.jpg" alt=""></a>
-            <div class="hidden md:flex items-center space-x-5 ml-6 lg:ml-10">
+            <div class="hidden md:flex items-center space-x-2.5 ml-6">
                 <a 
                     class="flex items-center space-x-2 text-white font-medium  transition-all duration-200"
                     [routerLink]="route.href"
@@ -14,7 +14,7 @@
                 </a>
             </div>
         </div>
-        <div class="flex items-center space-x-4 md:space-x-10 tracking-wide text-white">
+        <div class="flex items-center space-x-6 tracking-wide text-white">
             <a class="hidden md:flex items-center space-x-2" href="/" 
                 *ngIf="!user; else loggedInTemplate">
                 <span>Prijava</span>
@@ -23,7 +23,7 @@
                 </svg>                      
             </a>
             <ng-template #loggedInTemplate>
-                <div class="hidden md:flex items-center space-x-4 shadow rounded-md p-2 bg-teal-700 cursor-pointer">
+                <div class="hidden md:flex items-center space-x-4 cursor-pointer">
                     <a class="flex items-center space-x-2 group" href="/prijava">
                         <svg class="size-6 transition-all duration-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />

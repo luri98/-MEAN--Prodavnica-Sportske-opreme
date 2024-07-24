@@ -10,7 +10,7 @@
                     <span [innerHTML]="sanitizeSvg(route?.svg)"></span>
                     <span  
                         class="border-l-2 pl-1.5"
-                        [ngClass]="router.url === route.href ? 'text-teal-900 border-teal-800 font-semibold' : 'border-transparent hover:underline text-white'">{{route.name}}</span>
+                        [ngClass]="router.url === route.href ? 'text-teal-900 border-teal-800' : 'border-transparent hover:underline text-white'">{{route.name}}</span>
                 </a>
             </div>
         </div>

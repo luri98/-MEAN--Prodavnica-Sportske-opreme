@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 import { User } from '../../../models/user.module';
 import { NavbarRoute } from '../../../models/navbar-route.module';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -21,7 +24,7 @@ export class NavbarComponent {
 
   // user: User | null = null;
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer, public router: Router) {}
   sanitizeSvg(svgContent:  string | undefined): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(svgContent || '');
   }

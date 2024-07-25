@@ -63,7 +63,7 @@
 
     <div 
         [ngClass]="[isVisible ? 'translate-x-0' : 'translate-x-full']"
-        class="flex flex-col ransition-all duration-300 ease-in-out fixed right-0 top-16 w-full h-full max-w-xs shadow-md bg-white rounded-l-xl border-t-2 border-l-2 p-5">
+        class="flex flex-col transition-all duration-300 ease-in-out fixed right-0 top-16 z-50 w-full h-full max-w-xs shadow-md bg-white rounded-l-xl border-t-2 border-l-2 p-5">
         <a class="flex items-center space-x-2" href="/" 
             *ngIf="!user; else loggedInMobileTemplate">
             <span>Prijava</span>
